@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Rancho);
+
+.row{
+    width: 100%;
+}
+
+/* navigation section */
+
+.logo{
+    color: #188ae2 !important;
+    font-size: 50px;
+    font-family: 'Rancho', cursive;
+    
+}
+
+nav{
+    padding-left: 100px;
+}
+
+#navbar-container .btn{
+    border-radius: 5%; 
+    width: 130px;
+    float: right;
+}
+
+#flex-container{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: reverse;
+    -webkit-flex-direction: reverse;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    
+}
+
+.flex-item{
+    border-radius: 3%;
+}
+
+.flex-item a{
+    color: white;
+}
+
+/* ends here */
+
+/* Welcome section */
+
+#homeWelcomeDiv{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#homeWelcomeCarousel{
+    padding: 0px;
+    margin: 0px;
+}
+
+#homeWelcomeSearch {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    z-index: 2;
+    height: fit-content;
+    /* border: 1px solid red; */
+}
+
+/* ends here */
+
+/* services section */
+
+hr{
+    width: 40%;
+    float: left;
+}
+
+.whyListDiv{
+    overflow: hidden;
+}
+
+.whyListDiv ul{
+    overflow: hidden;
+    list-style: none;
+}
+
+#serviceRow{
+    padding-left: 40px;
+}
