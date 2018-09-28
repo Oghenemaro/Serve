@@ -10,8 +10,11 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/serveIndex.css">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style/serveIndex.css" >
     <!-- affects full page -->
     <!-- <link href="assets/css/core.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link href="assets/css/components.css" rel="stylesheet" type="text/css" /> -->
@@ -32,8 +35,8 @@
                 </div>
                 <div class="collapse navbar-collapse row col-sm-12 col-md-12 col-lg-5" id="navbar-container">
                     <div class="col-sm-12" style="padding: 0px; width: 95%;">
-                        <button class="btn btn-primary btn-lg flex-item ml-5"><a href="login.php">Sign In</a></button>
-                        <button class="btn btn-primary btn-lg flex-item ml-5"><a href="">Sign Up</a></button>
+                        <button class="btn btn-primary btn-lg authButton ml-5"><a href="login.php">Sign In</a></button>
+                        <button class="btn btn-primary btn-lg authButton ml-5"><a href="">Sign Up</a></button>
                     </div>
                 </div>
             </div>
@@ -75,118 +78,84 @@
                 </h1>
                 <hr>
             </div>
-            
-            <div class="col-sm-12 col-md-6 col-lg-6 whyListDiv">
-                    <div class="row">
-                            <div class="">
-                                <ul>
-                                    <li>
-                                        <i class="fa fa-bank" aria-hidden="true"></i>
-                                        <h3>Automate Payroll For Businesses</h3>
-                                        <p>Regardless of the number of employees present, Serve will automate your payroll system
-                                            reducing human errors and delays</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-adjust" aria-hidden="true"></i>
-                                        <h3>Balance Financal And Judicial Activities</h3>
-                                        <p>Serve is built with the Judiciary system at heart, aiming to reduce the hassle between
-                                            financial services and judicial activities </p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-users" aria-hidden="true"></i>
-                                        <h3>Improve Financial Transactions Among Government Bodies </h3>
-                                        <p>Serve is designed to make transactions among government bodies fluid and seamless</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-                                        <h3>Enable Seamless Financial Transactions For Everyone</h3>
-                                        <p>Serve creates an environment where money can be transfered and received by anybody in a
-                                            seamless fashion</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa file-text-o" aria-hidden="true"></i>
-                                        <h3>Invoice Creation</h3>
-                                        <p>Regardless of your reason Serve has the ability to produce an invoice on request for any
-                                            purpose you require</p>
-                                    </li>
-                                </ul>
-            
-                            </div>
-                        </div>
-            </div>
-            <div class="col-md-6 col-lg-6">
 
+            <div class="col-sm-12 col-md-7 col-lg-7 whyListDiv">
+                <div class="row" id="whyRowDiv">
+                    <!-- <div class="col-sm-12"> -->
+                    <div class="iconDiv text-center col-sm-2"><i class="fas fa-university fa-3x" aria-hidden="true"></i></div>
+                    <div class=" whyDiv col-sm-10 col-md-9">
+                        <h6>Automate Payroll For Businesses</h6>
+                        <p>Regardless of the number of employees present, Serve will automate your payroll
+                            system
+                            reducing human errors and delays</p>
+                    </div>
+                    <!-- </div> -->
+
+
+                    <div class="iconDiv col-sm-2 text-center"><i class="fas fa-adjust fa-3x" aria-hidden="true"></i></div>
+                    <div class="whyDiv col-sm-10">
+                        <h6>Balance Financal And Judicial Activities</h6>
+                        <p>Serve is built with the Judiciary system at heart, aiming to reduce the hassle
+                            between
+                            financial services and judicial activities </p>
+                    </div>
+                    <div class="iconDiv col-sm-2 text-center"><i class="fas fa-users fa-3x" aria-hidden="true"></i></div>
+                    <div class="whyDiv col-sm-10">
+                        <h6>Improve Financial Transactions Among Government Bodies </h6>
+                        <p>Serve is designed to make transactions among government bodies fluid and seamless</p>
+                    </div>
+                    <div class="iconDiv col-sm-2 text-center"><i class="fas fa-credit-card fa-3x" aria-hidden="true"></i></div>
+                    <div class="whyDiv col-sm-10">
+                        <h6>Enable Seamless Financial Transactions For Everyone</h6>
+                        <p>Serve creates an environment where money can be transfered and received by anybody
+                            in a
+                            seamless fashion</p>
+                    </div>
+                    <div class="iconDiv col-sm-2 text-center"><i class="fas fa-file-alt fa-3x" aria-hidden="true"></i></div>
+                    <div class="whyDiv col-sm-10">
+                        <h6>Invoice Creation</h6>
+                        <p>Regardless of your reason Serve has the ability to produce an invoice on request for
+                            any
+                            purpose you require</p>
+                    </div>
+                </div>
             </div>
+            <div class="col-md-5"><img src="" alt="success"></div>
         </div>
 
-        <div class="row mb-5 ">
+        <div class="row" id="aboutServeDiv">
+            <div class="col-md-7">
 
+            </div>
+            <div class="col-md-5" id="aboutContent">
+                <h3 class="text-center mb-4 mt-5">About SERVE</h3>
+                <h4 class="mb-4 text-center">Serve is a sophisticated platform designed to ease financial transactions in Nigeria</h4>
+                <p class="text-center">Regardless of your reason behind making a finanacial transaction Serve is
+                    designed to fit your needs. Whether you represent a government organisation, business company or just looking to pay bills and support your
+                    family, Serve will deliver for you on time and with clear accuracy.
+                </p>
+            </div>
         </div>
-
         <div class="row">
-            <div class="col-sm-12">
-                <h1 style="text-align: center;">
-                    <span>Latest Events</span>
-                    <hr>
-                </h1>
-            </div>
-        </div>
-
-        <div class="row homeServices mb-5">
-            <div class="card-deck col-sm-12">
-                <div class="card col-sm-12 col-md-3 homeBlogCards">
-                    <img class="card-img-top" src="images/poultry-farm.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Statistics On Bird Consumption</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This
-                            content is a little bit longer.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+            <div class="col-sm-12 ">
+                <div class="col-sm-12 text-center ">
+                    <h2>Got Any Questions? We Are Here For you</h2>
+                    <h3>Contact Us</h3>
                 </div>
-                <div class="card col-sm-12 col-md-3 homeBlogCards">
-                    <img class="card-img-top" src="images/maize.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Maize Report</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                <div class="row">
+                    <div class=" iconDiv col-sm-4" ><i class="fas fa-phone-volume fa-2x" aria-hidden="true" style="float: right;"></i></div>
+                    <div class="col-sm-8">+234 70 3448 5980, +234 80 9327 7345</div>
                 </div>
-                <div class="card col-sm-12 col-md-3 homeBlogCards">
-                    <img class="card-img-top" src="images/catfish_market.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">The Catfish Market</h5>
-                        <p class="card-text">The Stockfish market is a rich market, being a preservative method of
-                            fish, people are incline
-                            to purchased an store for use over a period. It's market is estimated to be
-                            #160,000,000</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                <div class="row">
+                    <div class=" iconDiv col-sm-4"><i class="fas fa-envelope fa-2x " aria-hidden="true"></i></div>
+                    <div class="col-sm-8">supportgroup@serve.com</div>
                 </div>
-                <div class="card col-sm-12 col-md-3 homeBlogCards">
-                    <img class="card-img-top" src="images/sushi-rice.png" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Solving The Tomatoes Scarcity</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This
-                            card has even longer content than the first to show that equal height action.</p>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
-                    </div>
+                <div class="row">
+                    <div class="iconDiv col-sm-4"><i class="fas fa-address-book fa-2x" aria-hidden="true"></i></div>
+                    <div class="col-sm-8">Flat 43, Bodelon Street, Ikoyi. Lagos</div>
                 </div>
             </div>
         </div>
-    </div>
-
-
     </div>
 
 
@@ -198,7 +167,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-5 col-lg-3 mr-3 mt-5">
                                 <h1 class="mt-5">
-                                    <a href="index.html">TechFarms</a>
+                                    <a href="index.html" class="footer-logo">SERVE</a>
                                 </h1>
                             </div>
                             <div class="col-sm-6 col-md-3 col-lg-2 mr-2 mt-5  list-div">
@@ -237,7 +206,7 @@
                                 <form action="" method="" class="form-inline" style="float: right;">
                                     <div class="input-group mt-5">
                                         <input type="text" placeholder="Subscribe to emails" value="" name="" class="form-control" />
-                                        <button class="btn btn-success ml-2">Subscribe</button>
+                                        <button class="btn btn-primary ml-2">Subscribe</button>
                                     </div>
                                 </form>
                             </div>

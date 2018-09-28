@@ -1,43 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Rancho);
 
-.row{
+
+.row {
     width: 100%;
 }
 
 /* navigation section */
 
-.logo{
+.logo {
     color: #188ae2 !important;
     font-size: 50px;
     font-family: 'Rancho', cursive;
-    
 }
 
-nav{
+nav {
     padding-left: 100px;
 }
 
-#navbar-container .btn{
-    border-radius: 5%; 
+#navbar-container .btn {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
     width: 130px;
     float: right;
 }
 
-#flex-container{
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: reverse;
-    -webkit-flex-direction: reverse;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
-    
+.authButton {
+    /* border-radius: 50px; */
 }
 
-.flex-item{
-    border-radius: 3%;
-}
-
-.flex-item a{
+.authButton a {
     color: white;
 }
 
@@ -45,7 +38,7 @@ nav{
 
 /* Welcome section */
 
-#homeWelcomeDiv{
+#homeWelcomeDiv {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -53,7 +46,7 @@ nav{
     margin: 0px;
 }
 
-#homeWelcomeCarousel{
+#homeWelcomeCarousel {
     padding: 0px;
     margin: 0px;
 }
@@ -71,20 +64,143 @@ nav{
 
 /* services section */
 
-hr{
+hr {
     width: 40%;
     float: left;
 }
 
-.whyListDiv{
+.whyListDiv {
     overflow: hidden;
+    padding: 0px;
 }
 
-.whyListDiv ul{
+.whyListDiv ul {
     overflow: hidden;
     list-style: none;
 }
 
-#serviceRow{
+#serviceRow {
     padding-left: 40px;
+}
+
+.iconDiv {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    height: 100%;
+    width: 100px;
+}
+
+.whyDiv {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    width: 200px;
+}
+
+.fas{
+    color: #F39C12;
+}
+
+@media screen and (max-width : 700px) {
+    #serviceRow {
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #whyRowDiv {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .whyDiv {
+        font-size: 15px;
+        width: 300px;
+        margin-left: 5px;
+    }
+
+    .whyDiv h3 {
+        font-size: 18px;
+    }
+
+    .iconDiv {
+        width: 50px;
+    }
+
+    .fas {
+        font-size: 20px;
+        margin-top: 5px;
+    }   
+}
+
+/* ends here */
+
+/* about serve content starts here */
+
+#aboutServeDiv{
+    background-color: #F2F3F4;
+    margin: 0px;
+    padding-right: 100px;
+}
+
+#aboutServeDiv h3{
+    font-weight: 200;
+}
+
+/* footer */
+
+footer {
+    background-color: #323031;
+    color: whitesmoke;
+    width: 100%;
+}
+
+.footer-logo{
+    color: #188ae2 !important;
+    font-size: 90px;
+    font-family: 'Rancho', cursive;
+
+}
+
+.list-div {
+    /* border: 1px solid red; */
+}
+
+.list-div ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.list-div ul li {
+    list-style: none;
+    font-size: 15px;
+}
+
+.list-div ul li a {
+    color: #B3B6B7;
+}
+
+footer h1 a {
+    color: white;
+}
+
+footer .form-div input {
+    float: left;
+}
+
+footer .input-group {
+    float: left;
+}
+
+.socialMediaLogos ul li {
+    display: inline;
+    margin-right: 50px;
+}
+
+.copyright {
+    color: #5F6A6A;
+}
+
+.contactForm {
+    padding: 0px;
 }
