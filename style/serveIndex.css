@@ -10,7 +10,7 @@
 .logo {
     color: #188ae2 !important;
     font-size: 50px;
-    font-family: 'Rancho', cursive;
+    font-family: 'Rancho', cursive !important; 
 }
 
 nav {
@@ -130,7 +130,11 @@ hr {
     .fas {
         font-size: 20px;
         margin-top: 5px;
-    }   
+    }
+    
+    #aboutServeDiv{
+        padding-right: 0px;
+    }
 }
 
 /* ends here */
@@ -140,12 +144,26 @@ hr {
 #aboutServeDiv{
     background-color: #F2F3F4;
     margin: 0px;
-    padding-right: 100px;
+    padding-right: 80px;
 }
 
 #aboutServeDiv h3{
     font-weight: 200;
 }
+
+#aboutContent{
+    padding: 0px;
+}
+
+/* ends here */
+
+/* contact section starts here */
+
+.contactIconDiv{
+    width: 50px;
+    margin-bottom: 200px;
+}
+
 
 /* footer */
 
@@ -157,7 +175,7 @@ footer {
 
 .footer-logo{
     color: #188ae2 !important;
-    font-size: 90px;
+    font-size: 60px;
     font-family: 'Rancho', cursive;
 
 }
