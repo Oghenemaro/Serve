@@ -64,9 +64,8 @@ nav {
 
 /* services section */
 
-hr {
-    width: 40%;
-    float: left;
+#serviceRow {
+    padding-left: 40px;
 }
 
 .whyListDiv {
@@ -77,10 +76,6 @@ hr {
 .whyListDiv ul {
     overflow: hidden;
     list-style: none;
-}
-
-#serviceRow {
-    padding-left: 40px;
 }
 
 .iconDiv {
@@ -98,83 +93,10 @@ hr {
     width: 200px;
 }
 
-.fas{
-    color: #F39C12;
-}
 
-@media screen and (max-width : 700px) {
-
-    /* mobile view navigation */
-
-    /* mobile view service section starts */
-    #serviceRow {
-        padding: 10px;
-        margin: 0px;
-    }
-
-    #whyRowDiv {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .whyDiv {
-        font-size: 15px;
-        width: 300px;
-        margin-left: 5px;
-    }
-
-    .whyDiv h3 {
-        font-size: 18px;
-    }
-
-    .iconDiv {
-        width: 30px;
-    }
-
-    /* ends here */
-
-    .fas {
-        font-size: 20px;
-        margin-top: 5px;
-    }
-    
-    /* mobile view about serve starts here */
-    #aboutServeRow{
-        padding-right: 0px;
-    }
-
-    /* ends here */
-
-    /* mobile view contact serve row starts here */
-
-    #contactServeContainer{
-        padding-right: 0px;
-    }
-
-    #contactDetailsRow{
-        margin: 0px;
-    }
-
-    .contactIconDiv{
-        padding: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        width: 5px;
-        padding-right: 15px;
-        font-size: 10px;
-    }
-
-    .contactDetailsDiv{
-        width: 250px;
-        padding: 0px;
-        margin-bottom: 25px;
-    }
-
-
-    /* ends here */
-}
 
 /* ends here */
+
 
 /* about serve content starts here */
 
@@ -188,8 +110,14 @@ hr {
     font-weight: 200;
 }
 
+#aboutContentImage{
+    margin-right: 0px;
+    padding: 10px;
+}
+
 #aboutContent{
     padding: 0px;
+    margin: 0px;
 }
 
 /* ends here */
@@ -258,4 +186,94 @@ footer .input-group {
 
 .contactForm {
     padding: 0px;
+}
+
+
+/* mobile view starts here */
+
+@media screen and (max-width : 700px) {
+
+    /* mobile view navigation */
+
+    nav{
+        padding: 0px;
+    }
+
+    /* mobile view service section starts */
+    #serviceRow {
+        padding: 10px;
+        margin: 0px;
+    }
+
+    #whyRowDiv {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .whyDiv {
+        font-size: 15px;
+        width: 320px;
+        margin-left: 5px;
+    }
+
+    .whyDiv h3 {
+        font-size: 18px;
+    }
+
+    .iconDiv {
+        width: 35px;
+        margin-top: 10px;
+    }
+
+    /* ends here */
+
+    .fas {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    
+    /* mobile view about serve starts here */
+    #aboutServeRow{
+        padding-right: 0px;
+    }
+
+    /* ends here */
+
+    /* mobile view contact serve row starts here */
+
+    #contactServeContainer{
+        padding-right: 0px;
+    }
+
+    #contactDetailsRow{
+        margin: 0px;
+    }
+
+    .contactIconDiv{
+        padding: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        width: 5px;
+        padding-right: 15px;
+        font-size: 10px;
+    }
+
+    .contactDetailsDiv{
+        width: 250px;
+        padding: 0px;
+        margin-bottom: 25px;
+    }
+}
+
+/* miscallenous */
+
+
+.fas{
+    color:  #F39C12;  
+}
+
+
+hr {
+    width: 40%;
+    float: left;
 }
