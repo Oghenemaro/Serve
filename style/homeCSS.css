@@ -51,13 +51,27 @@ nav {
     margin: 0px;
 }
 
-#homeWelcomeSearch {
+#homeWelcome {
     position: absolute;
     margin: 0px;
     padding: 0px;
     z-index: 2;
-    height: fit-content;
+    height: auto;
     /* border: 1px solid red; */
+}
+
+/* .homeWelcomeServicesDiv{
+    height: 200px;
+
+} */
+
+.homeWelcomeServices{
+    height: 100px;
+    width: 50px;
+}
+
+.homeWelcomeServices:hover{
+    background-color: #D0D3D4;
 }
 
 /* ends here */
