@@ -60,14 +60,20 @@ nav {
     /* border: 1px solid red; */
 }
 
-/* .homeWelcomeServicesDiv{
-    height: 200px;
-
-} */
+.homeWelcomeServicesRow{
+    padding-left: 70px;
+    margin: 0px;
+    /* padding-right: 10px; */
+}
 
 .homeWelcomeServices{
     height: 100px;
-    width: 50px;
+    width: 90px;
+}
+
+.homeWelcomeServices .fas{
+    color: darkgray;
+    /* stroke: black; */
 }
 
 .homeWelcomeServices:hover{
