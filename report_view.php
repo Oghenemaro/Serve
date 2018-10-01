@@ -90,7 +90,7 @@ while($row = mysqli_fetch_assoc($result)){
 
                                                     ?>
                                                         <tr>
-                                                            <td><?php echo $num; ?></td>
+                                                            <td><?php echo $num ; ?></td>
                                                             <td><?php echo $rows["eFirst_name"]. " ". $rows["eLast_name"]; ?></td>
                                                             <td><?php echo $rows["monthly_salary"]; ?></td>
                                                             <td><?php echo $rows["allowance"]; ?></td>

@@ -21,7 +21,6 @@ session_start();
 			$_SESSION['lastname'] = $values["eLast_name"];
 			$_SESSION['firstname'] = $values["eFirst_name"];
 			if($username == $values["eEmail"] && $password == $values["ePassword"] && "0" == $values["type"]){
-
 				header("Location: emp_salary.php");
 			}else if ($username == $values["eEmail"] && $password == $values["ePassword"] && "1" == $values["type"]) {
 				header("Location: report_view.php");

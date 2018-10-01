@@ -2,18 +2,11 @@
 	include("start_Session.php");
 	include("sql_connection.php");
     $querys = "select s.eid, s.monthly_salary, e.status from salary s join employee e on s.eid = e.eid where status = '0'";
-	// $query = "SELECT e.status, s.monthly_salary, a.transport, a.housing, a.clothing, a.feeding, a.special from salary s join employee e on s.eid = e.eid join allowances a on s.aid = a.aid  where e.status = 0  ";
-	
-	
 	$result = mysqli_query($connection, $querys);
-	
 ?>
 
+
 <?php
-	
-
-
-
 	while ($rows = mysqli_fetch_assoc($result)){
         $id = $rows['eid'];
         $monthly_salary = $rows['monthly_salary'];
@@ -27,7 +20,6 @@
         if ($results) {
             $row = mysqli_fetch_assoc($results);
             $allowances = $row["Transport"] + $row["Housing"] + $row["Clothing"] + $row["Feeding"] + $row["special"];
-            // $allowances = $row["Transport"];
             $BHT = $monthly_salary + $row["Transport"] + $row["Housing"];
         }
 
@@ -98,7 +90,7 @@
 
         $loan_insert = "insert into loan (eID, tid, Amount, status, amount_paid, date_times, decided) values ('$id', '$tid', '$amount', '$status', '$amount_paid', now(), $decided)";
         $execute = mysqli_query($connection, $sql);
-        $loan_execute = mysqli_query($connection, $loan_insert);
+        // $loan_execute = mysqli_query($connection, $loan_insert);
         if ($execute) {
     ?>
         <script>
@@ -114,9 +106,5 @@
         </script>
     <?php
         }
-			
    }
 ?>
-                </tbody>
-            </table>
-        </div>

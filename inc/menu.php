@@ -57,10 +57,10 @@ include("start_Session.php");
                                         confirm("Are You Sure You Want To Pay Out");
                                     }
                                 </script> -->
-                                <a href="payroll.php" class="waves-effect" ><i class="zmdi zmdi-email"></i><span> Run Payroll </span></a>
+                                <a href="payroll_payment.php" class="waves-effect" ><i class="zmdi zmdi-email"></i><span> Run Payroll </span></a>
                             </li>
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-invert-colors"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-invert-colors"></i> <span> Staff Info</span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="admin_employee.php?page=0 ">Add Staff</a></li>
                                     <li><a href="admin_employee.php?page=2">Edit Staff</a></li>
@@ -68,7 +68,7 @@ include("start_Session.php");
                                 </ul>
                             </li>
                             <li class="has_sub">
-                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-invert-colors"></i> <span> Income </span> <span class="menu-arrow"></span></a>
+                                <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-invert-colors"></i> <span>Staff Income </span> <span class="menu-arrow"></span></a>
                                 <ul class="list-unstyled">
                                     <li><a href="salary.php">Edit Salary</a></li>
                                 </ul>
