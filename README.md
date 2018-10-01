@@ -11,8 +11,12 @@ To get started with using this application, you must create an account within th
 Airbnb style
 
 # Screenshots
+
+## Login Page
 ![Alt text](screenshots/loginPage.png?raw=true "Login Page")
+## Admin Dashboard
 ![Alt text](screenshots/adminDashboard.png?raw=true "Admin Dashboard")
+## Employee Dashboard
 ![Alt text](screenshots/employeeDashboard.png?raw=true "Employee Dashboard")
 
 # Built with
