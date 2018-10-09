@@ -31,6 +31,7 @@ $result = mysqli_query($connection, $querys);
             $NHF = $monthly_salary * 0.025;
             $pension = $BHT * 0.08; 
     
+            
             $Tax_relief = $relief + $NHF + $pension + 17166.67;
     
             //determine Taxable income
