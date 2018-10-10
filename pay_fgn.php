@@ -23,23 +23,23 @@ include("sql_connection.php");
                                 <div class="fgnForm card-box mt-5" >
                         			<h2 class="text-center">Federal High Court Of Nigeria</h2>
 
-                                    <div class="text-center">
-                                        <form class="form-horizontal text-center" role="form" action="" method="post" style="border: 1px solid red; ">
+                                    <div class="formDiv text-center mt-5">
+                                        <form class="form-horizontal text-center" role="form" action="" method="post">
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label">Name Of MDA</label>
+                                                    <label class="col-md-3 control-label">Name Of MDA</label>
                                                     <div class="col-md-6">
                                                         <input type="text" class="form-control" value="" placeholder="First Name" required="" name="fname">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label" for="example-email">Purpose For Payment</label>
+                                                    <label class="col-md-3 control-label" for="example-email">Purpose For Payment</label>
                                                     <div class="col-md-6">
                                                         <input type="text" name="lname" class="form-control" placeholder="Last Name" required="">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label">Amount</label>
-                                                    <div class="col-md-3">
+                                                    <label class="col-md-3 control-label">Amount</label>
+                                                    <div class="col-md-6">
                                                         <select class="form-control" required="" name="sgender">
                                                             <option selected="">Select Gender</option>
                                                             <option>Male</option>
@@ -49,31 +49,31 @@ include("sql_connection.php");
                                                     </div>
 
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label">Address</label>
+                                                    <label class="col-md-3 control-label">Address</label>
                                                     <div class="col-md-6">
                                                         <textarea class="form-control" rows="5" name="taddress"></textarea>
                                                     </div>
                                                 </div>
                                                  <div class="form-group">
-                                                    <label class="col-md-2 control-label" for="example-email">Phone Number</label>
+                                                    <label class="col-md-3 control-label" for="example-email">Phone Number</label>
                                                     <div class="col-md-6">
                                                         <input type="number" name="pnum" class="form-control" placeholder="Phone Number" required="">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label" for="example-email">Email</label>
+                                                    <label class="col-md-3 control-label" for="example-email">Email</label>
                                                     <div class="col-md-6">
                                                         <input type="email" name="email" class="form-control" placeholder="Email" required="">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label">Password</label>
+                                                    <label class="col-md-3 control-label">Password</label>
                                                     <div class="col-md-6">
                                                         <input type="text" name="Password" class="form-control" placeholder="password" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label">Department</label>
+                                                    <label class="col-md-3 control-label">Department</label>
                                                     <div class="col-md-6">
                                                         <select class="form-control" name="sDepartment" required  id="selectDepartment">
                                                             <option selected>Select Deparment</option>
@@ -94,7 +94,7 @@ include("sql_connection.php");
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label class="col-md-2 control-label">Select Position</label>
+                                                    <label class="col-md-3 control-label">Select Position</label>
                                                     <div class="col-md-6">
                                                         <select class="form-control" name="sPosition" id="selectPosition">
                                                       
@@ -103,6 +103,7 @@ include("sql_connection.php");
                                                 </div>
                                                  <div class="form-group">
                                                     <button type="submit" class="btn btn-success waves-effect w-md waves-light m-b-5" name="login" >Save</button>
+                                                    <button type="reset" class="btn btn-danger waves-effect w-md waves-light m-b-5" name="reset" >Cancel</button>
                                                  </div>
                                             </form>
                                     </div>

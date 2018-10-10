@@ -3,6 +3,11 @@ body{
     padding: 10px 120px 10px 150px;
 }
 
+.formDiv {
+    padding-left: 100px;
+    /* padding-right: 40px; */
+}
+
 h2{
-    color: black;
+    color: white;
 }
