@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./style/homeStyle.css">
+    <link rel="stylesheet" href="./style/homeStyles.css">
     <!-- affects full page -->
     <!-- <link href="assets/css/core.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link href="assets/css/components.css" rel="stylesheet" type="text/css" /> -->
@@ -56,36 +56,32 @@
                     <div class="col-md-6 col-lg-6"></div>
                     <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                         <div class="row">
-                            <div class="col-sm-12">
-                                <h3>Experience Some Services</h3>
+                            <div class="col-sm-12 mt-3">
+                                <h3>Choose A Service</h3>
                             </div>
                             <div class="col-sm-12 homeWelcomeServicesDiv mt-4">
                                 <div class="row homeWelcomeServicesRow">
-                                    <a href="#" class="homeWelcomeServices">
-                                        <div class=" text-center">
-                                            <i class="fas fa-university fa-3x" aria-hidden="true"></i>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="homeWelcomeServices">
-                                        <div class=" text-center">
-                                            <i class="fas fa-adjust fa-3x" aria-hidden="true"></i>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="homeWelcomeServices">
-                                        <div class="text-center col-sm-3">
-                                            <i class="fas fa-users fa-3x" aria-hidden="true"></i>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="homeWelcomeServices">
-                                        <div class="text-center col-sm-3">
-                                            <i class="fas fa-users fa-3x" aria-hidden="true"></i>
-                                        </div>
-                                    </a>
+                                    <div class="col-sm-6">
+                                        <a href="pay_fgn.php" class="homeWelcomeServices">
+                                            <div class=" text-center">
+                                                <i class="fas fa-university fa-3x" aria-hidden="true"></i>
+                                                <p>Pay Federal Government</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="login.php" class="homeWelcomeServices">
+                                            <div class=" text-center">
+                                                <i class="fas fa-adjust fa-3x" aria-hidden="true"></i>
+                                                <p>Access Payroll</p>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 text-center">
+                            <div class="col-sm-12 text-center mt-4">
                                 <div class="form-group" style="width: 100%; ">
-                                    <button class="btn btn-md btn-success" style="color: white;">Explore All Services</button>
+                                    <button class="btn btn-md btn-primary" style="color: white;">Explore All Services</button>
                                 </div>
                             </div>
                         </div>

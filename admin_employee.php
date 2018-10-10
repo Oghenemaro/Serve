@@ -10,7 +10,6 @@ $page = $_GET['page'];
     <head>
         <?php 
             include("inc/header.php");
-
         ?>
     </head>
 
@@ -80,12 +79,7 @@ $page = $_GET['page'];
                                                         <!-- <span class="col-md-2 input-group-addon bg-primary b-0 text-white"><i class="ti-calendar"></i></span> -->
                                                     </div><!-- input-group -->
                                                     </div>
-<!--
 
-                                                <div class="form-group">
-                                                    
-                                                </div>
--->
                                                 <div class="form-group">
                                                     <label class="col-md-2 control-label">Address</label>
                                                     <div class="col-md-6">
@@ -254,12 +248,6 @@ $page = $_GET['page'];
                                                                     ?>
                                                             </select>
                                                         </div>
-
-<!--
-                                                        <div class="col-md-1">
-                                                            <button type="submit" name="send" class="btn btn-icon waves-effect waves-light btn-success m-b-5"> <i class="fa fa-thumbs-o-up"></i> </button>
-                                                        </div>
--->
                                                     </form>
                                                 </div>
                                             </div>
@@ -303,26 +291,6 @@ $page = $_GET['page'];
 
         <?php include("inc/scripts.php") ?>        
         <script>
-            // jQuery(document).ready(function() {
-            //      // Date Picker
-            // jQuery('#datepicker').datepicker();
-            // jQuery('#datepicker-autoclose').datepicker({
-            //     autoclose: true,
-            //     todayHighlight: true
-            // });
-            // jQuery('#datepicker-inline').datepicker();
-            // jQuery('#datepicker-multiple-date').datepicker({
-            //     format: "mm/dd/yyyy",
-            //     clearBtn: true,
-            //     multidate: true,
-            //     multidateSeparator: ","
-            // });
-            // jQuery('#date-range').datepicker({
-            //     toggleActive: true
-            // });
-            // });
-
-
             // ajax to call function on select
             $(document).ready(function() {
                 $("#selectDepartment").change(function (){
