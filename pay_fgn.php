@@ -26,50 +26,45 @@ include("sql_connection.php");
                                     <div class="formDiv text-center mt-5">
                                         <form class="form-horizontal text-center" role="form" action="" method="post">
                                                 <div class="form-group">
-                                                    <label class="col-md-3 control-label">Name Of MDA</label>
+                                                    <label class="col-md-3 control-label">Full Name: </label>
                                                     <div class="col-md-6">
-                                                        <input type="text" class="form-control" value="" placeholder="First Name" required="" name="fname">
+                                                        <input type="text" class="form-control" value="" placeholder="First Name Middle Name Last Name" required="" name="fname">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-3 control-label" for="example-email">Purpose For Payment</label>
+                                                    <label class="col-md-3 control-label">Name Of MDA: </label>
                                                     <div class="col-md-6">
-                                                        <input type="text" name="lname" class="form-control" placeholder="Last Name" required="">
+                                                        <select class="form-control" required name="payment-purpose" style="height: 100%;">
+                                                            <option selected>Select MDA Type</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label" for="payment-purpose">Purpose For Payment</label>
+                                                    <div class="col-md-6">
+                                                        <select class="form-control" required name="payment-purpose" style="height: 100%;">
+                                                            <option selected>Select Payment Purpose</option>
+
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label">Amount</label>
                                                     <div class="col-md-6">
-                                                        <select class="form-control" required="" name="sgender">
-                                                            <option selected="">Select Gender</option>
-                                                            <option>Male</option>
-                                                            <option>Female</option>
-                                                        </select>
-                                                    </div>
-                                                    </div>
-
-                                                <div class="form-group">
-                                                    <label class="col-md-3 control-label">Address</label>
-                                                    <div class="col-md-6">
-                                                        <textarea class="form-control" rows="5" name="taddress"></textarea>
+                                                        <input type="text" class="form-control" value="" placeholder="cost of MDA" required="" name="amount"> 
                                                     </div>
                                                 </div>
                                                  <div class="form-group">
-                                                    <label class="col-md-3 control-label" for="example-email">Phone Number</label>
+                                                    <label class="col-md-3 control-label" for="pnum">Phone Number</label>
                                                     <div class="col-md-6">
-                                                        <input type="number" name="pnum" class="form-control" placeholder="Phone Number" required="">
+                                                        <input type="number" name="pnum" class="form-control" placeholder="Phone Number" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-3 control-label" for="example-email">Email</label>
+                                                    <label class="col-md-3 control-label" for="email">Email</label>
                                                     <div class="col-md-6">
-                                                        <input type="email" name="email" class="form-control" placeholder="Email" required="">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="col-md-3 control-label">Password</label>
-                                                    <div class="col-md-6">
-                                                        <input type="text" name="Password" class="form-control" placeholder="password" required>
+                                                        <input type="email" name="email" class="form-control" placeholder="Email" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -102,7 +97,7 @@ include("sql_connection.php");
                                                     </div>
                                                 </div>
                                                  <div class="form-group">
-                                                    <button type="submit" class="btn btn-success waves-effect w-md waves-light m-b-5" name="login" >Save</button>
+                                                    <button type="submit" class="btn btn-success waves-effect w-md waves-light m-b-5" name="login" >Proceed</button>
                                                     <button type="reset" class="btn btn-danger waves-effect w-md waves-light m-b-5" name="reset" >Cancel</button>
                                                  </div>
                                             </form>
@@ -149,5 +144,40 @@ include("sql_connection.php");
     </div>
 
     <?php include("inc/scripts.php") ?>    
+
+    <script>
+            // ajax to call function on select
+            $(document).ready(function() {
+                $("#selectDepartment").change(function (){
+                    var id = $(this).val();
+                    var dataValue = 'id=' + id;
+                    $.ajax({
+                        type: "POST",
+                        url: "functions.php",
+                        data: dataValue,
+                        cache: false,
+                        success: function(html){
+                            $("#selectPosition").html(html);
+                        }
+                    });
+                });
+            });
+            
+            $(document).ready(function() {
+                $("#selectEmp").change(function (){
+                    var id = $(this).val();
+                    var dataValue = 'id=' + id;
+                    $.ajax({
+                        type: "POST",
+                        url: "edit_employee.php",
+                        data: dataValue,
+                        cache: false,
+                        success: function(html){
+                            $("#editForm").html(html);
+                        }
+                    });
+                });
+            });
+        </script>
 </body>
 </html>
