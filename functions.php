@@ -3,17 +3,18 @@ include("sql_connection.php");
 include("start_Session");
 
 $roleID = $_POST['id'];
-$query = "select * from department_role where dID= '$roleID' ";
-$result = mysqli_query($connection, $query);
-if(!$result){
-	die("Can't load at the moment");
-}else{
-	while ($row = mysqli_fetch_assoc($result)) {
-		echo "<option value=".  $row['rID'] .">" .$row['rDepartment_role'] ."</option>";
-	}
+if (!$roleID) {
+	echo "<option> No deparment roles available for this position </option>";
 }
-
-
+	$query = "select * from department_role where dID= '$roleID' ";
+	$result = mysqli_query($connection, $query);
+	if(!$result){
+		die("Can't load at the moment");
+	}else{
+		while ($row = mysqli_fetch_assoc($result)) {
+			echo "<option value=".  $row['rID'] .">" .$row['rDepartment_role'] ."</option>";
+		}
+	}
 ?>
 
 
@@ -21,9 +22,6 @@ if(!$result){
 
 
 <?php 
-	// retrieve id from ajax
-	// pass id to query
-
 	if (isset($_POST['send'])) {
 		$newSalary = $_POST['newSalary'];
 		$empID = $_POST['empID'];
