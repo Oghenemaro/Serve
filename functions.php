@@ -18,9 +18,6 @@ if (!$roleID) {
 ?>
 
 
-
-
-
 <?php 
 	if (isset($_POST['send'])) {
 		$newSalary = $_POST['newSalary'];

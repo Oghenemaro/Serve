@@ -28,17 +28,16 @@ include("sql_connection.php");
 
                                     <div class="formDiv text-center mt-5">
                                         <form class="form-horizontal text-center" role="form" action="" method="post">
-                                        
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label">Full Name: </label>
                                                     <div class="col-md-6">
-                                                        <input type="text" class="form-control" value="" placeholder="Full name" required="" name="fname">
+                                                        <input type="text" class="form-control" value="" placeholder="Full name" name="fname" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label">Name Of MDA: </label>
                                                     <div class="col-md-6">
-                                                        <select id="selectMDA" class="form-control" required name="payment-purpose" style="height: 100%;">
+                                                        <select id="selectMDA" class="form-control" name="payment-purpose" style="height: 100%;" required>
                                                             <option selected>Select MDA Type</option>
                                                             <?php
                                                                 $query = "select * from mda";
@@ -52,23 +51,24 @@ include("sql_connection.php");
                                                                     }
                                                                 }
                                                              ?>
-
                                                         </select>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label" for="payment-purpose">Purpose For Payment</label>
                                                     <div class="col-md-6">
-                                                        <select id="mdaServiceField" class="form-control" required name="payment-purpose" style="height: 100%;">
-                                                            <option selected>Select Payment Purpose</option>
-
+                                                        <select id="mdaServiceField" class="form-control" name="payment-purpose" style="height: 100%;" required>
+                                                                
                                                         </select>
                                                     </div>
                                                 </div>
+                                                <!-- <div class="form-group" id="mdaServiceExtra">
+                                         
+                                                </div> -->
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label">Amount</label>
                                                     <div class="col-md-6">
-                                                        <input type="text" class="form-control" value="" placeholder="cost of MDA" required="" name="amount"> 
+                                                        <input type="text" class="form-control" value="" placeholder="cost of MDA" name="amount" required> 
                                                     </div>
                                                 </div>
                                                  <div class="form-group">
@@ -83,38 +83,9 @@ include("sql_connection.php");
                                                         <input type="email" name="email" class="form-control" placeholder="Email" required>
                                                     </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label class="col-md-3 control-label">Department</label>
-                                                    <div class="col-md-6">
-                                                        <select class="form-control" name="sDepartment" required  id="selectDepartment">
-                                                            <option selected>Select Deparment</option>
-                                                        <?php 
-                                                            $query = "select * from department";
-                                                            $result = mysqli_query($connection, $query);
-                                                            if ($result) {
-                                                                while ($row = mysqli_fetch_assoc($result)) {
-                                                                    $id = $row['dID'];
-                                                        ?>
-                                                            <option value="<?php echo  $row['dID']; ?>"> <?php echo $row['dDepartment']; ?></option>
-                                                        <?php
-                                                                }
-                                                            }
-                                                        ?>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label class="col-md-3 control-label">Select Position</label>
-                                                    <div class="col-md-6">
-                                                        <select class="form-control" name="sPosition" id="selectPosition">
-                                                      
-                                                        </select>
-                                                    </div>
-                                                </div>
                                                 <script src="https://js.paystack.co/v1/inline.js"></script>
                                                  <div class="form-group">
-                                                    <button type="button" class="btn btn-success waves-effect w-md waves-light m-b-5" name="login" onClick="paywithPaystack()">Make Payment</button>
+                                                    <button type="submit" class="btn btn-success waves-effect w-md waves-light m-b-5" name="login" onClick="paywithPaystack()">Make Payment</button>
                                                     <button type="reset" class="btn btn-danger waves-effect w-md waves-light m-b-5" name="reset" >Cancel</button>
                                                  </div>
                                                  
@@ -202,9 +173,20 @@ include("sql_connection.php");
                 });
             });
 
-
-            // paystack call
-
+            // $(document).ready(function()){
+            //     $("#mdaServiceField").change(function (){
+            //         var serviceID = $(this).val();
+            //         $.ajax({
+            //             type: 'POST',
+            //             url: 'pay_fgn_function.php',
+            //             data: serviceID,
+            //             cache: false,
+            //             success: function(html) {
+            //                 $("mdaServiceExtra").html(html);
+            //             }
+            //         });
+            //     });
+            // }
         </script>
 </body>
 </html>
