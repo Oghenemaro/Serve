@@ -29,13 +29,13 @@ include("sql_connection.php");
                                     <div class="formDiv text-center mt-5">
                                         <form class="form-horizontal text-center" role="form" action="" method="post">
                                                 <div class="form-group">
-                                                    <label class="col-md-3 control-label">Full Name: </label>
+                                                    <label class="col-md-3 control-label">Full Name : </label>
                                                     <div class="col-md-6">
                                                         <input type="text" class="form-control" value="" placeholder="Full name" name="fname" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-3 control-label">Name Of MDA: </label>
+                                                    <label class="col-md-3 control-label">Name Of MDA : </label>
                                                     <div class="col-md-6">
                                                         <select id="selectMDA" class="form-control" name="payment-purpose" style="height: 100%;" required>
                                                             <option selected>Select MDA Type</option>
@@ -55,30 +55,30 @@ include("sql_connection.php");
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-3 control-label" for="payment-purpose">Purpose For Payment</label>
+                                                    <label class="col-md-3 control-label" for="payment-purpose">Purpose For Payment :</label>
                                                     <div class="col-md-6">
-                                                        <select id="mdaServiceField" class="form-control" name="payment-purpose" style="height: 100%;" required>
+                                                        <select id="mdaServiceField" class="form-control" name="payment-purpose" style="height: 100%;" onClick="selectPayment();" required>
                                                                 
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <!-- <div class="form-group" id="mdaServiceExtra">
+                                                <div class="form-group" id="mdaServiceExtra">
                                          
-                                                </div> -->
+                                                </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-3 control-label">Amount</label>
+                                                    <label class="col-md-3 control-label">Amount :</label>
                                                     <div class="col-md-6">
                                                         <input type="text" class="form-control" value="" placeholder="cost of MDA" name="amount" required> 
                                                     </div>
                                                 </div>
                                                  <div class="form-group">
-                                                    <label class="col-md-3 control-label" for="pnum">Phone Number</label>
+                                                    <label class="col-md-3 control-label" for="pnum">Phone Number :</label>
                                                     <div class="col-md-6">
                                                         <input type="number" name="pnum" class="form-control" placeholder="Phone Number" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="col-md-3 control-label" for="email">Email</label>
+                                                    <label class="col-md-3 control-label" for="email">Email :</label>
                                                     <div class="col-md-6">
                                                         <input type="email" name="email" class="form-control" placeholder="Email" required>
                                                     </div>
@@ -155,7 +155,6 @@ include("sql_connection.php");
             handler.openIframe();
         }
 
-
             // ajax to call function on select
             $(document).ready(function() {
                 $("#selectMDA").change(function (){
@@ -172,21 +171,37 @@ include("sql_connection.php");
                     });
                 });
             });
+        // $(document).ready(function() {
+        //         $("#selectEmp").change(function (){
+        //             var id = $(this).val();
+        //             var dataValue = 'id=' + id;
+        //             $.ajax({
+        //                 type: "POST",
+        //                 url: "edit_employee.php",
+        //                 data: dataValue,
+        //                 cache: false,
+        //                 success: function(html){
+        //                     $("#editForm").html(html);
+        //                 }
+        //             });
+        //         });
+        //     });
 
-            // $(document).ready(function()){
-            //     $("#mdaServiceField").change(function (){
-            //         var serviceID = $(this).val();
-            //         $.ajax({
-            //             type: 'POST',
-            //             url: 'pay_fgn_function.php',
-            //             data: serviceID,
-            //             cache: false,
-            //             success: function(html) {
-            //                 $("mdaServiceExtra").html(html);
-            //             }
-            //         });
-            //     });
-            // }
+            $(document).ready(function(){
+                $("#mdaServiceField").change(function (){
+                    var serviceID = $(this).val();
+                        var data = 'mdaServiceID=' + serviceID;
+                    $.ajax({
+                        type: 'POST',
+                        url: 'access_mda_services.php',
+                        data: data,
+                        cache: false,
+                        success: function(html) {
+                            $("#mdaServiceExtra").html(html);
+                        }
+                    });
+                });
+            });
         </script>
 </body>
 </html>
