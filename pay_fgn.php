@@ -27,13 +27,13 @@ include("sql_connection.php");
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label">Full Name : </label>
                                                     <div class="col-md-6">
-                                                        <input type="text" class="form-control" value="" placeholder="Full name" name="fullName" required>
+                                                        <input type="text" class="form-control" placeholder="Full name" id="fullName" name="fullName" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label" for="email">Email :</label>
                                                     <div class="col-md-6">
-                                                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                                                        <input type="email" name="email" class="form-control" placeholder="Email" id="email" required>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
@@ -59,7 +59,7 @@ include("sql_connection.php");
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label" for="paymentPurpose">Purpose For Payment :</label>
                                                     <div class="col-md-6">
-                                                        <select id="mdaServiceField" class="form-control" name="paymentPurpose" style="height: 100%;" required>
+                                                        <select id="mdaServiceField" class="form-control" name="paymentPurpose" id="paymentPurpose" style="height: 100%;" required>
                                                                 
                                                         </select>
                                                     </div>
@@ -70,13 +70,13 @@ include("sql_connection.php");
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label">Amount :</label>
                                                     <div class="col-md-6">
-                                                        <input type="text" class="form-control" value="" placeholder="cost of MDA" name="amount" required> 
+                                                        <input type="text" class="form-control" placeholder="cost of MDA" name="amount" id="amount" required> 
                                                     </div>
                                                 </div>
                                                  <div class="form-group">
                                                     <label class="col-md-3 control-label" for="pnum">Phone Number :</label>
                                                     <div class="col-md-6">
-                                                        <input type="number" name="pnum" class="form-control" placeholder="Phone Number" required>
+                                                        <input type="number" name="pnum" class="form-control" placeholder="Phone Number" id="pnum" required>
                                                     </div>
                                                 </div>
                                                 <script src="https://js.paystack.co/v1/inline.js"></script>
@@ -100,6 +100,20 @@ include("sql_connection.php");
     <script>
         // paystack function
         function paywithPaystack() {
+            // user data
+            var email = $("#email").val();
+            var amount = $("#amount").val();
+            var mda = $("#selectMDA").val();
+            var pnum = $("#pnum").val(); 
+            var mdaService = $("#mdaServiceExtra").val();
+            var parties = $("#parties").val();
+            var suitNo = $("#suitNo").val();
+            var description = $("#description").val();
+            var location = $("#location").val();
+
+            var record = [email, amount, mda, pnum, mdaServices, parties, suitNo, description, location];
+
+            // paystack call
             var handler = PaystackPop.setup({
                 key: "pk_test_112dd76dcd6442a23f8c44c1f82adcb94530bb8a",
                 email: "nerdmaro@gmail.com",
@@ -116,7 +130,14 @@ include("sql_connection.php");
                     ]
                 },
                 callback: function(response){
-                    alert('success. transaction ref is ' + response.reference);
+                    if (response) {
+                        $.ajax({
+                            type: "POST",
+                            url: "pay_fgn_function.php",
+                            data: record
+                            success: alert('success. transaction ref is ' + response.reference);
+                        });
+                    }
                 },
                 onClose: function(){
                     alert('window closed');
@@ -146,7 +167,6 @@ include("sql_connection.php");
                 $("#mdaServiceField").change(function (){
                     var serviceID = $(this).val();
                     var data = 'mdaServiceID=' + serviceID;
-                        alert(data);
                     $.ajax({
                         type: 'POST',
                         url: 'access_mda_services.php',
