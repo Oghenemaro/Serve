@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-sm-6" style="border: 1px solid red;  margin: 0px;">
                     <!-- Right(Notification and Searchbox -->
-                    <ul class="nav navbar-nav navbar-right" style="border: 1px solid green; width: 100%;">
+                    <ul class="nav navbar-nav navbar-right" style="border: 1px solid green;">
                         <li>
                         <!-- Notification -->
                             <div class="notification-box">
