@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./style/homeStyles.css">
+    <link rel="stylesheet" href="./style/serveStyle.css" >
     <!-- affects full page -->
     <!-- <link href="assets/css/core.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link href="assets/css/components.css" rel="stylesheet" type="text/css" /> -->
@@ -33,7 +33,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse row col-sm-12 col-md-12 col-lg-5 mt-4" id="navbar-container">
+                <div class="collapse navbar-collapse row col-sm-12 col-md-12 col-lg-5" id="navbar-container">
                     <div class="col-sm-12" style="padding: 0px; width: 95%;">
                         <button class="btn btn-primary btn-lg authButton ml-3"><a href="login.php">Sign In</a></button>
                         <button class="btn btn-primary btn-lg authButton ml-3"><a href="">Sign Up</a></button>

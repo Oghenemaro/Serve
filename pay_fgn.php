@@ -23,7 +23,7 @@ include("sql_connection.php");
                                 <div class="fgnForm card-box mt-5" >
                                     <h2 class="text-center">Federal High Court Of Nigeria</h2>
                                     <div class="formDiv text-center mt-5">
-                                        <form class="form-horizontal text-center" role="form" action="" method="post">
+                                        <form id="fgnForm" class="form-horizontal text-center" role="form" action="" method="post">
                                                 <div class="form-group">
                                                     <label class="col-md-3 control-label">Full Name : </label>
                                                     <div class="col-md-6">
@@ -100,20 +100,12 @@ include("sql_connection.php");
     <script>
         // paystack function
         function paywithPaystack() {
-            // user data
-            var email = $("#email").val();
-            var amount = $("#amount").val();
-            var mda = $("#selectMDA").val();
-            var pnum = $("#pnum").val(); 
-            var mdaService = $("#mdaServiceExtra").val();
-            var parties = $("#parties").val();
-            var suitNo = $("#suitNo").val();
-            var description = $("#description").val();
-            var location = $("#location").val();
-
-            var record = [email, amount, mda, pnum, mdaServices, parties, suitNo, description, location];
-
-            // paystack call
+            
+            // var email, amount = "";
+            // // paystack call
+            // if (email == " " || amount = " ") {
+            //     alert("enter value");
+            // }
             var handler = PaystackPop.setup({
                 key: "pk_test_112dd76dcd6442a23f8c44c1f82adcb94530bb8a",
                 email: "nerdmaro@gmail.com",
@@ -130,14 +122,15 @@ include("sql_connection.php");
                     ]
                 },
                 callback: function(response){
-                    if (response) {
-                        $.ajax({
-                            type: "POST",
-                            url: "pay_fgn_function.php",
-                            data: record
-                            success: alert('success. transaction ref is ' + response.reference);
-                        });
-                    }
+                    // if (response) {
+                    //     $.ajax({
+                    //         type: "POST",
+                    //         url: "pay_fgn_function.php",
+                    //         data: "gfnm",
+                    //         success: alert('success. transaction ref is ' + response.reference);
+                    //     });
+                    // }
+                    alert('success. transaction ref is ' + response.reference);
                 },
                 onClose: function(){
                     alert('window closed');
