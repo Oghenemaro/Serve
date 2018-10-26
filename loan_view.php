@@ -20,7 +20,7 @@ include("sql_connection.php");
 		<div class="content-page">
 			<div class="content">
 				<div class="container">
-					<div class="row">
+					<div class="row contentRow">
                         <div class="col-lg-12">
                             <div class="card-box">
                                 <div class="table-responsive">
@@ -40,7 +40,7 @@ include("sql_connection.php");
                                                 <input type="text" class="form-control" value="" placeholder="interest Rate" required name="interestRate">
                                             </div>
                                             <div class="col-md-2">
-                                                <select class="form-control" name="payBack" required>
+                                                <select class="form-control" name="payBack" required  style="height: 100%;" >
                                                     <option selected>Select Option</option>
                                                     <option>Monthly Deduction</option>
                                                     <option>Yearly Deduction</option>
@@ -70,7 +70,7 @@ include("sql_connection.php");
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Loan</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control" name="sLoan" required  id="selectLoan">
+                                                    <select class="form-control" name="sLoan" required  id="selectLoan" style="height: 100%;">
                                                     <option selected>Select Loan</option>
                                                         <?php 
                                                             $query = "select tID, loan_type from loan_type";
@@ -112,7 +112,7 @@ include("sql_connection.php");
                                             <div class="form-group">
                                             <label class="col-md-2 control-label">Pay Back Options</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control" name="payBacks" required>
+                                                    <select class="form-control" name="payBacks" required style="height: 100%;">
                                                         <option selected>Select Option</option>
                                                         <option>Monthly Deduction</option>
                                                         <option>Yearly Deduction</option>

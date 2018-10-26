@@ -20,15 +20,16 @@ include("sql_connection.php");
 		<div class="content-page">
 			<div class="content">
 				<div class="container">
-                    <div class="row">
+                    <div class="row contentRow">
                         <div class="col-lg-12">
                             <div class="card-box">
                                 <div class="table-responsive">
                                     <div class="col-md-12 form-group">
-                                        <form class="form-horizontal" role="form" action="" method="POST">
+                                        <h4 class="mb-5">Create Employee Salary</h4>
+                                        <form class="form-horizontal" role="form" action="" method="POST" >
                                             <div class="form-group">
                                                 <div class="col-md-offset-1 col-md-3">
-                                                    <select class="form-control" name="sEmployee" required  id="selectEmployee">
+                                                    <select class="form-control" name="sEmployee" required  id="selectEmployee" style="height: 100%;">
                                                         <option selected>Select Employee</option>
                                                             <?php 
                                                                 $query = "select eID, eFirst_name, eLast_name from employee";
@@ -45,7 +46,7 @@ include("sql_connection.php");
                                                     </select>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    <select class="form-control" name="sSalaryType" required  id="selectEmployee">
+                                                    <select class="form-control" name="sSalaryType" required  id="selectEmployee" style="height: 100%;">
                                                         <option selected>Select Salary Type</option>
                                                         <?php 
                                                                 $query = "select ssid, Payment_type, taxable from salary_structure";
@@ -68,9 +69,9 @@ include("sql_connection.php");
                                                         Taxable
                                                     </label>
                                                 </div>
-                                                <div class="col-md-1 radio radio-success">
+                                                <div class="col-md-3 radio radio-success" >
                                                     <input type="radio" name="radio" id="radio5" value="">
-                                                    <label for="radio5">
+                                                    <label for="radio5" style="width: 100%;">
                                                         Non Taxable
                                                     </label>
                                                 </div>

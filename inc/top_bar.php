@@ -9,24 +9,24 @@
     </div>
     <!-- Button mobile view to collapse sidebar menu -->
     <div class="navbar navbar-default" role="navigation">
-        <div class="container" style="height: 100px; padding-top: 10px;  width: 100%;" >
+        <div class="container" style=" height: 80px; padding-top: 10px;  width: 100%;" >
             <!-- Page title -->
             <div class="row" style="width: inherit; margin: 0px;">
                 <div class="col-sm-6" style="margin: 0px;">
-                    <ul class="nav navbar-nav navbar-left" >
+                    <ul class="nav navbar-nav navbar-left" style="display: inline;" >
                     <li>
                         <button class="button-menu-mobile open-left">
                             <i class="zmdi zmdi-menu"></i>
                         </button>
                     </li>
                     <li>
-                        <h4 class="page-title">Welcome! <?php echo $lastname; ?></h4>
+                        <h2 class="page-title">Welcome! <?php echo $lastname; ?></h2>
                     </li>
                     </ul>
                 </div>
-                <div class="col-sm-6" style="margin: 0px;">
+                <div class="col-sm-6" style="margin: 0px;" >
                     <!-- Right(Notification and Searchbox -->
-                    <ul class="nav navbar-nav navbar-right searchUL" >
+                    <ul class="nav navbar-nav navbar-right searchUL" style="display: inline;">
                         <li>
                         <!-- Notification -->
                             <div class="notification-box">

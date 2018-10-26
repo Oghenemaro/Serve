@@ -22,7 +22,7 @@ include("sql_connection.php");
 		<div class="content-page">
 			<div class="content">
 				<div class="container">
-					<div class="row">
+					<div class="row contentRow">
 						<div class="col-lg-12">
 							<div class="card-box">
 								<form action="#">

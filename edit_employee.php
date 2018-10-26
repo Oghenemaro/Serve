@@ -46,7 +46,7 @@ if(!$result){
     <div class="form-group">
     <label class="col-md-2 control-label">Gender</label>
         <div class="col-md-3">
-            <select class="form-control" required name="sgender">
+            <select class="form-control" required name="sgender" style="height: 100%;">
         <option selected="" ><?php echo $gender; ?></option>
             <option>Male</option>
             <option>Female</option>
@@ -89,7 +89,7 @@ if(!$result){
     <div class="form-group">
         <label class="col-md-2 control-label">Department</label>
         <div class="col-md-6">
-            <select class="form-control" name="sDepartment" required  id="selectDepartment">
+            <select class="form-control" name="sDepartment" required  id="selectDepartment" style="height: 100%;">
                 <option selected><?php echo $department; ?></option>
                 <?php 
                     $query = "select * from department";
@@ -110,7 +110,7 @@ if(!$result){
     <div class="form-group">
         <label class="col-md-2 control-label">Position</label>
         <div class="col-md-6">
-            <select class="form-control" name="sPosition" id="selectPosition">
+            <select class="form-control" name="sPosition" id="selectPosition" style="height: 100%;">
                 <option selected><?php echo $position; ?></option>
             </select>
         </div>

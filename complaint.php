@@ -15,7 +15,7 @@
 		<div class="content-page">
 			<div class="content">
 				<div class="container">
-					<div class="row">
+					<div class="row contentRow">
 						<div class="col-lg-12">
 							<div class="card-box">
 								<h4 class="m-b-30 m-t-0 header-title"><b>Monthly Slip</b></h4>

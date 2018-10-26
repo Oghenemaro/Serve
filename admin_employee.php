@@ -39,7 +39,7 @@ $page = $_GET['page'];
                 <div class="content">
                     <div class="container">
                         
-                        <div class="row">
+                        <div class="row contentRow">
                             <div class="col-lg-12">
                                 <div class="card-box">
                                     <?php 
@@ -67,7 +67,7 @@ $page = $_GET['page'];
                                                 <div class="form-group">
                                                     <label class="col-md-2 control-label">Gender</label>
                                                     <div class="col-md-3">
-                                                        <select class="form-control" required="" name="sgender">
+                                                        <select class="form-control" required="" name="sgender" style="height: 100%;">
                                                             <option selected="">Select Gender</option>
                                                             <option>Male</option>
                                                             <option>Female</option>
@@ -107,7 +107,7 @@ $page = $_GET['page'];
                                                 <div class="form-group">
                                                     <label class="col-md-2 control-label">Department</label>
                                                     <div class="col-md-6">
-                                                        <select class="form-control" name="sDepartment" required  id="selectDepartment">
+                                                        <select class="form-control" name="sDepartment" required  id="selectDepartment" style="height: 100%;">
                                                             <option selected>Select Deparment</option>
                                                         <?php 
                                                             $query = "select * from department";
@@ -128,7 +128,7 @@ $page = $_GET['page'];
                                                 <div class="form-group">
                                                     <label class="col-md-2 control-label">Select Position</label>
                                                     <div class="col-md-6">
-                                                        <select class="form-control" name="sPosition" id="selectPosition">
+                                                        <select class="form-control" name="sPosition" id="selectPosition" style="height: 100%;">
                                                       
                                                         </select>
                                                     </div>
@@ -232,7 +232,7 @@ $page = $_GET['page'];
                                                 <div class="col-md-12 form-group">
                                                     <form class="form-horizontal" role="form" action="" method="POST">
                                                         <div class="col-md-offset-3 col-md-3">
-                                                            <select class="form-control" name="selectEmployee" required  id="selectEmp">
+                                                            <select class="form-control" name="selectEmployee" required  id="selectEmp" style="height: 100%;">
                                                                 <option selected>Select Employee</option>
                                                                     <?php 
                                                                         $query = "select eID, eFirst_name, eLast_name from employee";
