@@ -25,7 +25,7 @@ include("sql_connection.php");
                             <div class="card-box">
                                 <div class="table-responsive">
                                     <div class="col-md-12 form-group">
-                                        <h4 class="mb-5">Create Employee Salary</h4>
+                                        <h4 class="mb-5">Edit Employee Salary</h4>
                                         <form class="form-horizontal" role="form" action="" method="POST" >
                                             <div class="form-group">
                                                 <div class="col-md-offset-1 col-md-3">

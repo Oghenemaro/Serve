@@ -47,7 +47,7 @@ $page = $_GET['page'];
                                     ?>
                                     
 
-                        			<h4 class="header-title m-t-0 m-b-30">Employee</h4>
+                        			<h4 class="mb-5">Create Employee</h4>
 
                                     <div class="">
                                         <form class="form-horizontal" role="form" action="" method="post">
@@ -230,6 +230,7 @@ $page = $_GET['page'];
                                         <div class="card-box">
                                             <div class="table-responsive">
                                                 <div class="col-md-12 form-group">
+                                                <h4 class="mb-5">Edit Employee Details</h4>
                                                     <form class="form-horizontal" role="form" action="" method="POST">
                                                         <div class="col-md-offset-3 col-md-3">
                                                             <select class="form-control" name="selectEmployee" required  id="selectEmp" style="height: 100%;">

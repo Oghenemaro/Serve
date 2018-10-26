@@ -25,6 +25,7 @@ include("sql_connection.php");
                             <div class="card-box">
                                 <div class="table-responsive">
                                     <div class="col-md-12 form-group">
+                                        <h4 class="mb-5">Create New Loan</h4>
                                         <form class="form-horizontal" role="form" action=" " method="POST">
                                         <div class="col-md-12 form-group">
                                             <div class="col-md-2">
@@ -66,6 +67,7 @@ include("sql_connection.php");
                             <div class="card-box">
                                 <div class="table-responsive">
                                     <div class="col-md-12 form-group">
+                                        <h4 class="mb-5">Edit Existing Loan</h4>
                                         <form class="form-horizontal" role="form" action="" method="POST">
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Loan</label>
