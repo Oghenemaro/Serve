@@ -28,7 +28,7 @@ while($row = mysqli_fetch_assoc($result)){
 		<div class="content-page">
 			<div class="content">
 				<div class="container">
-					<div class="row">
+					<div class="row" style="margin-top: 80px;">
 						<div class="col-lg-4">
 							<div class="card-box">
 								<form action="#">

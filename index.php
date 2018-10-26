@@ -14,11 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./style/serveStyle.css" >
-    <!-- affects full page -->
-    <!-- <link href="assets/css/core.css" rel="stylesheet" type="text/css" /> -->
-    <!-- <link href="assets/css/components.css" rel="stylesheet" type="text/css" /> -->
-    <!-- <link href="assets/css/menu.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" href="./style/serveStyles.css" >
 </head>
 
 <body>
@@ -57,7 +53,7 @@
                     <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                         <div class="row">
                             <div class="col-sm-12 mt-3">
-                                <h3>Choose A Service</h3>
+                                <h3 class="homeIntro">Choose A Service</h3>
                             </div>
                             <div class="col-sm-12 homeWelcomeServicesDiv mt-4">
                                 <div class="row homeWelcomeServicesRow">

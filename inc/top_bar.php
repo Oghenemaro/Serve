@@ -9,9 +9,9 @@
     </div>
     <!-- Button mobile view to collapse sidebar menu -->
     <div class="navbar navbar-default" role="navigation">
-        <div class="container" style="padding: 0px; width: 100%;" >
+        <div class="container" style="height: 100px; padding-top: 10px;  width: 100%;" >
             <!-- Page title -->
-            <div class="row" style="border: 1px solid white; width: inherit; margin: 0px;">
+            <div class="row" style="width: inherit; margin: 0px;">
                 <div class="col-sm-6" style="margin: 0px;">
                     <ul class="nav navbar-nav navbar-left" >
                     <li>
@@ -24,9 +24,9 @@
                     </li>
                     </ul>
                 </div>
-                <div class="col-sm-6" style="border: 1px solid red;  margin: 0px;">
+                <div class="col-sm-6" style="margin: 0px;">
                     <!-- Right(Notification and Searchbox -->
-                    <ul class="nav navbar-nav navbar-right" style="border: 1px solid green;">
+                    <ul class="nav navbar-nav navbar-right searchUL" >
                         <li>
                         <!-- Notification -->
                             <div class="notification-box">

@@ -27,14 +27,14 @@ nav {
 /* #navbar-container{
 } */
 
-/* #navbar-container .btn {
+#navbar-container .btn {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     width: 130px;
     float: right;
-} */
+}
 
 .authButton {
     /* border-radius: 50px; */
@@ -68,6 +68,12 @@ nav {
     z-index: 2;
     height: auto;
     /* border: 1px solid red; */
+}
+
+h3 .homeIntro {
+    font-family: 'Rancho', cursive !important;
+    color: #5F6A6A;
+    font-size: 80px;
 }
 
 .homeWelcomeServicesRow{
